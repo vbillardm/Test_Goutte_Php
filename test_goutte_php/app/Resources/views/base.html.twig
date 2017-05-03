@@ -3,11 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('bootstrap-3.3.7-dist/css/bootstrap.css') }}"/>
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+            <script src="{{ asset('bootstrap-3.3.7-dist/js/bootstrap.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

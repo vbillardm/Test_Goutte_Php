@@ -1,0 +1,28 @@
+{{ form_errors(form) }}
+    {{ form_start(form) }}
+<div class="form" style="margin-left:10px">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="form__element form-field">
+                <div class="form__element__dots"></div>
+                <div class="form__element__label">
+                    {{ form_label(form.url ) }}
+                </div>
+                <div class="form__element__input">
+                    {{ form_widget(form.url) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <button
+                    type="submit"
+                    id="SearchCrawl"
+                    class="inline-block btn btn-primary pull-left btn--cta ">
+                Send request
+            </button>
+        </div>
+    </div>
+</div>
+{{ form_end(form) }}

@@ -395,6 +395,10 @@
     </parameter>
   </parameters>
   <services>
+    <service id="app.crawler.crawler" class="AppBundle\Crawler\Crawler"/>
+    <service id="app.form.type.crawlsearchtype" class="AppBundle\Form\Type\CrawlSearchType">
+      <tag name="form.type"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -455,7 +459,7 @@
                 <tag name="cache.pool" clearer="cache.default_clearer"/>
                 <argument>WTe2r-51hr</argument>
                 <argument>0</argument>
-                <argument>VxLdwn1p6nWRQiK9u6a2kq</argument>
+                <argument>+LU-GtOC80Umk6rKUYpTdA</argument>
                 <argument>/Applications/MAMP/htdocs/Test_Goutte_Php/test_goutte_php/var/cache/dev/pools</argument>
                 <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                 <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -638,7 +642,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>UDwLkcvmtv</argument>
       <argument>0</argument>
-      <argument>VxLdwn1p6nWRQiK9u6a2kq</argument>
+      <argument>+LU-GtOC80Umk6rKUYpTdA</argument>
       <argument>/Applications/MAMP/htdocs/Test_Goutte_Php/test_goutte_php/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -648,7 +652,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>amTYwfndyZ</argument>
       <argument>0</argument>
-      <argument>VxLdwn1p6nWRQiK9u6a2kq</argument>
+      <argument>+LU-GtOC80Umk6rKUYpTdA</argument>
       <argument>/Applications/MAMP/htdocs/Test_Goutte_Php/test_goutte_php/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -935,6 +939,7 @@
           <service class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
             <argument type="service" id="service_container"/>
             <argument type="collection">
+              <argument key="AppBundle\Form\Type\CrawlSearchType">app.form.type.crawlsearchtype</argument>
               <argument key="Symfony\Component\Form\Extension\Core\Type\FormType">form.type.form</argument>
               <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType">form.type.choice</argument>
               <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType">form.type.entity</argument>
@@ -1641,7 +1646,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>590851392a5ed0.59198442</argument>
+            <argument>59099ba4e86043.05946065</argument>
           </service>
         </argument>
       </argument>
@@ -1789,7 +1794,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>590851392a5ed0.59198442</argument>
+            <argument>59099ba4e86043.05946065</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
